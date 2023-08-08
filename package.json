@@ -14,8 +14,13 @@
     "js",
     "Mongoose"
   ],
+<<<<<<< HEAD
   "author": "Shabin",
   "license": "spk",
+=======
+  "author": "I-Novotek Academy",
+  "license": "ISC",
+>>>>>>> dc5841bc37ae118c2e711532d553264d4a7581f4
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.31.0",
