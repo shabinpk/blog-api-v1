@@ -6,6 +6,7 @@ const postRouter = require('./routes/posts/postRoutes');
 const commentRouter = require('./routes/comments/commentRoutes');
 const categoryRouter = require('./routes/categories/categoryRoutes');
 const dotenv=require('dotenv');
+const Post = require('./model/Post/Post');
 dotenv.config();
 require("./config/dbConnect");
 const app=express();
@@ -13,6 +14,18 @@ const app=express();
 //middleware
 app.use(express.json())
 
+
+app.get('/',async(req,res)=>{
+    try {
+        const posts=await Post.find();
+        res.json({
+            status:'success',
+            data:posts
+        });
+}catch(error){
+    res.json(error)
+    }
+})
 // const userAuth={
 //     isLogin:true,
 //     isAdmin:false
